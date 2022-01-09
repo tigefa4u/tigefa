@@ -1,0 +1,27 @@
+name: Node.js CI
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Altostra Push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set node version
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - name: Install Altostra CLI
+        run: |
+             npm install -g @altostra/cli
+             alto --version
+             alto api-key set ${{ secrets.ALTO_API_KEY }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Push to Altostra
+        # The "$(node -p -e "require('./package.json').version")" is extracting the version number from your package.json file
+        run: alto push v$(node -p -e "require('./package.json').version") --json
