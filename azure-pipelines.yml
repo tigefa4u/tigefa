@@ -9,9 +9,10 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
 variables:
 - group: stack
+
+steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '12.x'
