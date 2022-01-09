@@ -24,7 +24,7 @@ steps:
     alto --version
     alto api-key set ${ALTO_API_KEY}
     npm install
-    alto deploy dev-instance --push --env
+    alto deploy dev-instance --push --env Playground
     alto instances
     alto instances get dev-instance
   displayName: 'npm install and build'
