@@ -1,6 +1,7 @@
 {
-  "name": "altostra-template-s3-multipart-upload-nodejs",
+  "name": "tigefa",
   "version": "1.0.0",
+  "private": true,
   "description": "S3 multipart upload template",
   "scripts": {
     "test:local": "mocha tests/local-integ.js",
