@@ -19,6 +19,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm install -g npm
     npm install -g @altostra/cli
     alto --version
     alto api-key set ${ALTO_API_KEY}
