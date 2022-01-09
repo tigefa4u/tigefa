@@ -63,7 +63,7 @@
         "Files01": {
           "type": "resource.file-store",
           "name": "files",
-          "accessLevel": "private",
+          "accessLevel": "public-read",
           "filesSources": [
             {
               "path": "files",
