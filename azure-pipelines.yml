@@ -10,12 +10,19 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+variables:
+- group: stack
 - task: NodeTool@0
   inputs:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
 
 - script: |
+    npm install -g @altostra/cli
+    alto --version
+    alto api-key set ${ALTO_API_KEY}
     npm install
-    npm run build
+    alto deploy dev-instance --push --env
+    alto instances
+    alto instances get dev-instance
   displayName: 'npm install and build'
