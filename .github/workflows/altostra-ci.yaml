@@ -21,7 +21,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: npm install
+        run: npm install && npm audit fix
       - name: Push to Altostra
         # The "$(node -p -e "require('./package.json').version")" is extracting the version number from your package.json file
         run: alto push v$(node -p -e "require('./package.json').version") --json
