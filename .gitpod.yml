@@ -1,0 +1,6 @@
+vscode:
+  extensions:
+    - editorconfig.editorconfig
+    - github.vscode-pull-request-github
+    - davidanson.vscode-markdownlint
+    - amazonwebservices.aws-toolkit-vscode
