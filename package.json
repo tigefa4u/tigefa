@@ -5,7 +5,8 @@
   "description": "S3 multipart upload template",
   "scripts": {
     "test:local": "mocha tests/local-integ.js",
-    "test:remote": "mocha tests/remote-integ.js"
+    "test:remote": "mocha tests/remote-integ.js",
+    "prepare": "husky install"
   },
   "repository": "https://github.com/altostra/altostra-template-s3-multipart-upload-nodejs.git",
   "keywords": [],
@@ -16,6 +17,7 @@
     "axios": "^0.21.4",
     "chai": "^4.3.4",
     "cuid": "^2.1.8",
-    "mocha": "^8.4.0"
+    "mocha": "^8.4.0",
+    "husky": "^7.0.0"
   }
 }
